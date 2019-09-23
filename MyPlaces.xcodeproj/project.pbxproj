@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB75F19C2338852100CCCFA0 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75F19B2338852100CCCFA0 /* CustomTableViewCell.swift */; };
 		FB9F8DEF23308A0000B0EF45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9F8DEE23308A0000B0EF45 /* AppDelegate.swift */; };
 		FB9F8DF423308A0000B0EF45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB9F8DF223308A0000B0EF45 /* Main.storyboard */; };
 		FB9F8DF623308A0200B0EF45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB9F8DF523308A0200B0EF45 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB75F19B2338852100CCCFA0 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		FB9F8DEB23308A0000B0EF45 /* MyPlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB9F8DEE23308A0000B0EF45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB9F8DF323308A0000B0EF45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				FB9F8DEE23308A0000B0EF45 /* AppDelegate.swift */,
 				FB9F8E0023308F7700B0EF45 /* MainViewController.swift */,
+				FB75F19B2338852100CCCFA0 /* CustomTableViewCell.swift */,
 				FB9F8DF223308A0000B0EF45 /* Main.storyboard */,
 				FB9F8DF523308A0200B0EF45 /* Assets.xcassets */,
 				FB9F8DF723308A0200B0EF45 /* LaunchScreen.storyboard */,
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB75F19C2338852100CCCFA0 /* CustomTableViewCell.swift in Sources */,
 				FB9F8DEF23308A0000B0EF45 /* AppDelegate.swift in Sources */,
 				FB9F8E0123308F7700B0EF45 /* MainViewController.swift in Sources */,
 			);
@@ -285,6 +289,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2SG6U667DB;
 				INFOPLIST_FILE = MyPlaces/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,6 +308,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2SG6U667DB;
 				INFOPLIST_FILE = MyPlaces/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
