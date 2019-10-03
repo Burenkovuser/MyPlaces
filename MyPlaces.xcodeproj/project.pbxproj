@@ -11,6 +11,7 @@
 		FB350A012338C3860097E9DB /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB350A002338C3860097E9DB /* PlaceModel.swift */; };
 		FB350A03233B25330097E9DB /* NewPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB350A02233B25330097E9DB /* NewPlaceViewController.swift */; };
 		FB35FBB82341AE9A005132D5 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB35FBB72341AE9A005132D5 /* StorageManager.swift */; };
+		FB46160F2344B0CB000FADB2 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB46160E2344B0CB000FADB2 /* RatingControl.swift */; };
 		FB75F19C2338852100CCCFA0 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75F19B2338852100CCCFA0 /* CustomTableViewCell.swift */; };
 		FB9F8DEF23308A0000B0EF45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9F8DEE23308A0000B0EF45 /* AppDelegate.swift */; };
 		FB9F8DF423308A0000B0EF45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB9F8DF223308A0000B0EF45 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		FB350A002338C3860097E9DB /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 		FB350A02233B25330097E9DB /* NewPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceViewController.swift; sourceTree = "<group>"; };
 		FB35FBB72341AE9A005132D5 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		FB46160E2344B0CB000FADB2 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		FB75F19B2338852100CCCFA0 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		FB9F8DEB23308A0000B0EF45 /* MyPlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB9F8DEE23308A0000B0EF45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			children = (
 				FB9F8DEE23308A0000B0EF45 /* AppDelegate.swift */,
 				FB9F8E0023308F7700B0EF45 /* MainViewController.swift */,
+				FB46160E2344B0CB000FADB2 /* RatingControl.swift */,
 				FB350A002338C3860097E9DB /* PlaceModel.swift */,
 				FB35FBB72341AE9A005132D5 /* StorageManager.swift */,
 				FB75F19B2338852100CCCFA0 /* CustomTableViewCell.swift */,
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB46160F2344B0CB000FADB2 /* RatingControl.swift in Sources */,
 				FB75F19C2338852100CCCFA0 /* CustomTableViewCell.swift in Sources */,
 				FB350A012338C3860097E9DB /* PlaceModel.swift in Sources */,
 				FB350A03233B25330097E9DB /* NewPlaceViewController.swift in Sources */,

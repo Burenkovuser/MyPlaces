@@ -20,6 +20,7 @@ class NewPlaceViewController: UITableViewController {
     @IBOutlet weak var placeName: UITextField!
     @IBOutlet weak var placeLockation: UITextField!
     @IBOutlet weak var placeType: UITextField!
+    @IBOutlet weak var ratingControl: RatingControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +31,10 @@ class NewPlaceViewController: UITableViewController {
             self.newPlace.savePlaces()
         }
 */
-        tableView.tableFooterView = UIView() // убираем разлиновку ниже используемых ячеек
+        tableView.tableFooterView = UIView(frame: CGRect(x: 0,
+                                                         y: 0,
+                                                         width: tableView.frame.size.width,
+                                                         height: 1)) // убираем разлиновку ниже используемых ячеек
         saveButton.isEnabled = false // делаем кнопку сохранения не активной
 
         placeName.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged) // отслеживать изменения в поле названия
@@ -92,7 +96,9 @@ class NewPlaceViewController: UITableViewController {
         let newPlace = Place(name: placeName.text!,
                              location: placeLockation.text,
                              type: placeType.text,
-                             imageData: imageData)
+                             imageData: imageData,
+                             rating: Double(ratingControl.rating)
+        )
         
         if currentPlace != nil {
             try! realm.write {
@@ -100,6 +106,7 @@ class NewPlaceViewController: UITableViewController {
                 currentPlace?.location = newPlace.location
                 currentPlace?.type = newPlace.type
                 currentPlace?.imageData = newPlace.imageData
+                currentPlace?.rating = newPlace.rating
             }
         } else {
             StorageManager.saveObject(newPlace)
@@ -134,6 +141,7 @@ class NewPlaceViewController: UITableViewController {
             placeName.text = currentPlace?.name
             placeLockation.text = currentPlace?.location
             placeType.text = currentPlace?.type
+            ratingControl.rating = Int(currentPlace!.rating)
         }
     }
     
