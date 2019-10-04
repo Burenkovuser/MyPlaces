@@ -7,6 +7,7 @@
 //
 
 import UIKit
+//import Cosmos
 
 class NewPlaceViewController: UITableViewController {
     
@@ -14,6 +15,7 @@ class NewPlaceViewController: UITableViewController {
     
     var currentPlace: Place? // объект который передадим для редактирования
     var imageIsChanged = false
+    var currentRating = 0.0
     
     @IBOutlet weak var placeImage: UIImageView!
     @IBOutlet weak var saveButton: UIBarButtonItem!
@@ -21,6 +23,7 @@ class NewPlaceViewController: UITableViewController {
     @IBOutlet weak var placeLockation: UITextField!
     @IBOutlet weak var placeType: UITextField!
     @IBOutlet weak var ratingControl: RatingControl!
+    //@IBOutlet weak var cosmosView: CosmosView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +42,11 @@ class NewPlaceViewController: UITableViewController {
 
         placeName.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged) // отслеживать изменения в поле названия
         setupEditScreen()
+        
+        //cosmosView.settings.fillMode = .half //режим заполнения звезд - частично, полносностью, пополовине.
+        //cosmosView.didTouchCosmos = { rating in
+        //    self.currentRating = rating
+        //}
     }
     
     // MARK: Table view delegate
@@ -98,6 +106,7 @@ class NewPlaceViewController: UITableViewController {
                              type: placeType.text,
                              imageData: imageData,
                              rating: Double(ratingControl.rating)
+                            //rating: currentRating
         )
         
         if currentPlace != nil {
@@ -142,6 +151,7 @@ class NewPlaceViewController: UITableViewController {
             placeLockation.text = currentPlace?.location
             placeType.text = currentPlace?.type
             ratingControl.rating = Int(currentPlace!.rating)
+            //cosmosView.rating = currentPlace!.rating
         }
     }
     

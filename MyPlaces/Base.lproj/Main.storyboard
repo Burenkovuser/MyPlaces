@@ -196,7 +196,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HqH-Cg-3Ff" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="boA-OU-jUn" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1158" y="89"/>
+            <point key="canvasLocation" x="1157.9710144927537" y="88.392857142857139"/>
         </scene>
         <!--My Places-->
         <scene sceneID="q64-Lr-q16">
@@ -226,39 +226,56 @@
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="gcc-Lr-c1R">
-                                                    <rect key="frame" x="96" y="8" width="302" height="69"/>
+                                                    <rect key="frame" x="96" y="8" width="212" height="69"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VXh-v6-Lpz">
-                                                            <rect key="frame" x="0.0" y="0.0" width="302" height="22.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="212" height="22.5"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLq-W9-6bg">
-                                                            <rect key="frame" x="0.0" y="25.5" width="302" height="21"/>
+                                                            <rect key="frame" x="0.0" y="25.5" width="212" height="21"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Hj-AG-WHH">
-                                                            <rect key="frame" x="0.0" y="49.5" width="302" height="19.5"/>
+                                                            <rect key="frame" x="0.0" y="49.5" width="212" height="19.5"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="13"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                 </stackView>
+                                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="90" placeholderIntrinsicHeight="14" translatesAutoresizingMaskIntoConstraints="NO" id="eAe-8W-fVl" customClass="CosmosView" customModule="Cosmos">
+                                                    <rect key="frame" x="316" y="35.5" width="90" height="14"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="90" id="0X4-ib-4wh"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                            <real key="value" value="14"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="filledImage" value="filledStar"/>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="emptyStar"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="gcc-Lr-c1R" firstAttribute="top" secondItem="WMp-8G-ahC" secondAttribute="top" constant="8" id="7uP-OO-reZ"/>
+                                                <constraint firstItem="eAe-8W-fVl" firstAttribute="centerY" secondItem="WMp-8G-ahC" secondAttribute="centerY" id="ExL-8R-iwR"/>
                                                 <constraint firstItem="hLw-N5-Fm9" firstAttribute="leading" secondItem="WMp-8G-ahC" secondAttribute="leading" constant="15" id="MpP-5C-pYQ"/>
                                                 <constraint firstItem="hLw-N5-Fm9" firstAttribute="centerY" secondItem="WMp-8G-ahC" secondAttribute="centerY" id="bvE-N5-f89"/>
+                                                <constraint firstAttribute="trailing" secondItem="eAe-8W-fVl" secondAttribute="trailing" constant="8" id="eJJ-T9-z9s"/>
                                                 <constraint firstItem="gcc-Lr-c1R" firstAttribute="leading" secondItem="hLw-N5-Fm9" secondAttribute="trailing" constant="16" id="fhT-DW-wGt"/>
                                                 <constraint firstAttribute="bottom" secondItem="gcc-Lr-c1R" secondAttribute="bottom" constant="8" id="xGK-9r-Kc5"/>
-                                                <constraint firstAttribute="trailing" secondItem="gcc-Lr-c1R" secondAttribute="trailing" constant="16" id="xMI-IV-frI"/>
+                                                <constraint firstItem="eAe-8W-fVl" firstAttribute="leading" secondItem="gcc-Lr-c1R" secondAttribute="trailing" constant="8" id="zJi-WB-9Lj"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cosmosView" destination="eAe-8W-fVl" id="yRG-B2-c1w"/>
                                             <outlet property="imageOfPlace" destination="hLw-N5-Fm9" id="064-yA-Mgq"/>
                                             <outlet property="locationLabel" destination="gLq-W9-6bg" id="Kaq-lM-S9n"/>
                                             <outlet property="nameLabel" destination="VXh-v6-Lpz" id="VOh-H1-Al8"/>
@@ -308,7 +325,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aAe-IP-Q6D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="308" y="88.605697151424295"/>
+            <point key="canvasLocation" x="307.24637681159425" y="88.392857142857139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7iu-pi-Hn2">
@@ -351,6 +368,8 @@
     <resources>
         <image name="AZ" width="25" height="24"/>
         <image name="Photo" width="195" height="196"/>
+        <image name="emptyStar" width="255" height="256"/>
+        <image name="filledStar" width="237.5" height="238"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="tiY-Ln-eVq"/>
